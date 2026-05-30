@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday Harsh</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#0a0a0a;
+color:white;
+overflow-x:hidden;
+}
+
+section{
+min-height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+padding:40px;
+text-align:center;
+}
+
+h1{
+font-size:4rem;
+margin-bottom:20px;
+}
+
+h2{
+font-size:2.5rem;
+margin-bottom:20px;
+}
+
+p{
+max-width:700px;
+line-height:1.8;
+font-size:1.2rem;
+}
+
+button{
+padding:15px 35px;
+font-size:1rem;
+border:none;
+border-radius:30px;
+cursor:pointer;
+margin-top:20px;
+}
+
+#passwordScreen{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:black;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+z-index:9999;
+}
+
+input{
+padding:15px;
+font-size:1rem;
+border-radius:10px;
+border:none;
+margin-top:20px;
+}
+
+.memory{
+margin:30px;
+}
+
+.photo{
+width:300px;
+height:300px;
+object-fit:cover;
+border-radius:20px;
+margin:20px;
+}
+
+.stats{
+font-size:1.5rem;
+line-height:2;
+}
+
+.final{
+font-size:3rem;
+}
+
+</style>
+</head>
+
+<body>
+
+<div id="passwordScreen">
+
+<h1>🔒</h1>
+
+<h2>Only Legends Allowed</h2>
+
+<p>Enter the secret password</p>
+
+<input type="password" id="password">
+
+<button onclick="checkPassword()">Enter</button>
+
+</div>
+
+<section>
+
+<h1>Happy Birthday Dear 🎉</h1>
+
+<p>
+Some people get a text.
+<br><br>
+Some people get an Instagram story.
+<br><br>
+You got an entire website.
+</p>
+
+</section>
+
+<section>
+
+<h2>Our Story</h2>
+
+<div class="memory">
+<p>
+Around 3 years ago...
+<br><br>
+Two people somehow became friends.
+Nobody knew this friendship would survive school,
+bad jokes, and endless conversations.
+</p>
+</div>
+
+</section>
+
+<section>
+
+<h2>Core Memories</h2>
+
+<div class="memory">
+<p>
+🚶 Walking to your house after school.
+Some of the best conversations happened there.
+</p>
+</div>
+
+<div class="memory">
+<p>
+💸 The endless battle over who pays first.
+Still unresolved.
+</p>
+</div>
+
+<div class="memory">
+<p>
+😂 Being called Chudail and pta nhi kya kya approximately one million times.
+</p>
+</div>
+
+</section>
+
+<section>
+
+<h2>Friendship Statistics</h2>
+
+<div class="stats">
+
+Years Together: 3+
+
+<br>
+
+Times Called Chudail: Too Many
+
+<br>
+
+Arguments About Paying: Infinite
+
+<br>
+
+Loyalty Level: ∞
+
+</div>
+
+</section>
+
+<section>
+
+<h2>Why You're Special</h2>
+
+<p>
+
+✔ Caring: Gentleman Behavior (love it sm!!)
+
+<br><br>
+
+✔ Respectful: Aage bhi karta rahiyo
+
+<br><br>
+
+✔ Genuine: Haan woh toh hai tu..(Don't ever try to hide anything from me)
+
+<br><br>
+
+One of the few people who always stays real.
+
+</p>
+
+</section>
+
+<section>
+
+<h2>Photos</h2>
+
+<p>
+
+Replace these with your photos later.
+
+</p>
+
+<img src="photo1.jpg" class="photo">
+<img src="photo2.jpg" class="photo">
+<img src="photo3.jpg" class="photo">
+
+</section>
+
+<section>
+
+<h2>A Message For You</h2>
+
+<p>
+
+Harshu,
+
+Thank you for all the memories,
+the laughs,
+the random conversations,
+and for being one of the most genuine people I know.
+
+Happy Birthday ❤️
+
+</p>
+
+</section>
+
+<section>
+
+<div class="final">
+
+🎂 Happy Birthday Harsh 🎂
+
+<br><br>
+
+Thank you for being a part of my life.
+
+</div>
+
+</section>
+
+<script>
+
+function checkPassword(){
+
+let pass =
+document.getElementById("password").value;
+
+if(pass==="Harshu"){
+
+document.getElementById("passwordScreen")
+.style.display="none";
+
+}
+else{
+
+alert("Wrong password");
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
