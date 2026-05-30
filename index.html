@@ -16,11 +16,15 @@ font-family:Arial,sans-serif;
 }
 
 body{
-background:#0a0a0a;
+background:
+radial-gradient(circle at 20% 20%, rgba(255,255,255,0.15) 1px, transparent 1px),
+radial-gradient(circle at 80% 40%, rgba(255,255,255,0.15) 1px, transparent 1px),
+radial-gradient(circle at 60% 80%, rgba(255,255,255,0.15) 1px, transparent 1px),
+#050505;
+background-size: 200px 200px;
 color:white;
 overflow-x:hidden;
 }
-
 section{
 min-height:100vh;
 display:flex;
@@ -34,8 +38,11 @@ text-align:center;
 h1{
 font-size:4rem;
 margin-bottom:20px;
+text-shadow:
+0 0 10px white,
+0 0 20px white,
+0 0 40px white;
 }
-
 h2{
 font-size:2.5rem;
 margin-bottom:20px;
@@ -98,7 +105,18 @@ line-height:2;
 .final{
 font-size:3rem;
 }
+.fade{
+opacity:0;
+transform:translateY(40px);
+animation:fadeUp 1s forwards;
+}
 
+@keyframes fadeUp{
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
 </style>
 </head>
 
@@ -117,7 +135,7 @@ font-size:3rem;
 
 </div>
 
-<section>
+<section class="fade">
 
 <h1>THE LEGEND OF HARSH 🎉</h1>
 <p>A story of friendship, chaos, battles and nicknames.</p>
@@ -131,7 +149,7 @@ You got an entire website.
 
 </section>
 
-<section>
+<section class="fade">
 
 <h2>Our Story</h2>
 
@@ -147,7 +165,7 @@ bad jokes, and endless conversations.
 
 </section>
 
-<section>
+<section class="fade">
 
 <h2>Core Memories</h2>
 
@@ -173,7 +191,7 @@ Still unresolved.
 
 </section>
 
-<section>
+<section class="fade">
 
 <h2>Friendship Statistics</h2>
 
@@ -197,7 +215,7 @@ Loyalty Level: ∞
 
 </section>
 
-<section>
+<section class="fade">
 
 <h2>Why You're Special</h2>
 
@@ -221,7 +239,7 @@ One of the few people who always stays real.
 
 </section>
 
-<section>
+<section class="fade">
 
 <h2>Photos</h2>
 
@@ -238,7 +256,7 @@ One of the few people who always stays real.
 
 </section>
 
-<section>
+<section class="fade">
 
 <h2>A Message For You</h2>
 
@@ -257,7 +275,7 @@ Happy Birthday ❤️
 
 </section>
 
-<section>
+<section class="fade">
 
 <div class="final">
 
