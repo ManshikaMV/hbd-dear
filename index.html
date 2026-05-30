@@ -1,320 +1,213 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Happy Birthday Harsh</title>
-
+<title>The Legend of Hola</title>
 <style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
-}
-
+*{margin:0;padding:0;box-sizing:border-box}
 body{
-background:
-radial-gradient(circle at 20% 20%, rgba(255,255,255,0.15) 1px, transparent 1px),
-radial-gradient(circle at 80% 40%, rgba(255,255,255,0.15) 1px, transparent 1px),
-radial-gradient(circle at 60% 80%, rgba(255,255,255,0.15) 1px, transparent 1px),
-#050505;
-background-size: 200px 200px;
+font-family:Arial,sans-serif;
+background:#050505;
 color:white;
 overflow-x:hidden;
 }
+#stars,#stars2{
+position:fixed;inset:0;pointer-events:none;
+background-image:
+radial-gradient(2px 2px at 20px 30px,#fff,transparent),
+radial-gradient(2px 2px at 100px 80px,#fff,transparent),
+radial-gradient(1px 1px at 200px 150px,#fff,transparent),
+radial-gradient(2px 2px at 300px 40px,#fff,transparent),
+radial-gradient(1px 1px at 500px 120px,#fff,transparent);
+background-size:600px 300px;
+animation:move 25s linear infinite;
+opacity:.6;
+}
+#stars2{animation-duration:40s;opacity:.3}
+@keyframes move{from{transform:translateY(0)}to{transform:translateY(300px)}}
 section{
 min-height:100vh;
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
-padding:40px;
 text-align:center;
+padding:30px;
 }
-
 h1{
-font-size:4rem;
-margin-bottom:20px;
-text-shadow:
-0 0 10px white,
-0 0 20px white,
-0 0 40px white;
+font-size:clamp(2.5rem,8vw,5rem);
+text-shadow:0 0 20px rgba(255,255,255,.8);
 }
-h2{
-font-size:2.5rem;
-margin-bottom:20px;
-}
-
-p{
-max-width:700px;
-line-height:1.8;
-font-size:1.2rem;
-}
-
+h2{font-size:clamp(2rem,6vw,3rem);margin-bottom:20px}
+p{max-width:800px;line-height:1.8;font-size:1.1rem}
 button{
-padding:15px 35px;
-font-size:1rem;
-border:none;
-border-radius:30px;
-cursor:pointer;
-margin-top:20px;
+padding:14px 28px;border:none;border-radius:30px;
+cursor:pointer;margin-top:20px;font-size:1rem;
 }
-
-#passwordScreen{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:black;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
+.gallery{
+display:flex;flex-wrap:wrap;justify-content:center;gap:20px;
+}
+.gallery img{
+width:260px;height:260px;object-fit:cover;
+border-radius:18px;
+box-shadow:0 0 20px rgba(255,255,255,.2);
+transition:.4s;
+}
+.gallery img:hover{transform:scale(1.05)}
+#vault{
+position:fixed;inset:0;background:#000;
+display:flex;flex-direction:column;
+justify-content:center;align-items:center;
 z-index:9999;
 }
-
 input{
-padding:15px;
-font-size:1rem;
-border-radius:10px;
-border:none;
-margin-top:20px;
+padding:12px;border-radius:10px;border:none;margin-top:15px
 }
-
-.memory{
-margin:30px;
-}
-
-.photo{
-width:300px;
-height:300px;
-object-fit:cover;
-border-radius:20px;
-margin:20px;
-}
-
-.stats{
-font-size:1.5rem;
-line-height:2;
-}
-
-.final{
-font-size:3rem;
-}
-.fade{
-opacity:0;
-transform:translateY(40px);
-animation:fadeUp 1s forwards;
-}
-
-@keyframes fadeUp{
-to{
-opacity:1;
-transform:translateY(0);
-}
-}
+.hidden{display:none}
+.stat{font-size:1.5rem;margin:10px}
+.final{font-size:2rem;max-width:900px}
+.fade{animation:fade 1s ease}
+@keyframes fade{from{opacity:0;transform:translateY(25px)}to{opacity:1;transform:none}}
 </style>
 </head>
-
 <body>
 
-<div id="passwordScreen">
+<div id="stars"></div>
+<div id="stars2"></div>
 
+<div id="vault">
 <h1>🔒</h1>
-
-<h2>Harsh ka Birthday Vault💕</h2>
-<p>Hint: what do you call me everyday?🫨</p>
-
-<input type="password" id="password">
-
-<button onclick="checkPassword()">Enter</button>
-
+<h2>Hola's Birthday Vault</h2>
+<p>Hint: What do you call me every day?</p>
+<input id="pass" type="password" placeholder="Password">
+<button onclick="unlock()">Enter</button>
 </div>
 
 <section class="fade">
-
-<h1>THE LEGEND OF HARSH 🎉</h1>
-<p>A story of friendship, chaos, battles and nicknames.</p>
+<h1>THE LEGEND OF HOLA</h1>
 <p>
-Some people get a text.
-<br><br>
-Some people get an Instagram story.
-<br><br>
-You got an entire website.
+A story of friendship, chaos, payment battles,
+and one unfortunate nickname: CCC.
 </p>
-
 </section>
 
 <section class="fade">
-
-<h2>Our Story</h2>
-
-<div class="memory">
+<h2>Chapter 1: The Beginning</h2>
 <p>
-Around 3 years ago...
-<br><br>
-Two people somehow became friends.
-Nobody knew this friendship would survive school,
-bad jokes, and endless conversations.
+Around 3 years ago, two people somehow became friends.
+Nobody expected this friendship to survive school,
+bad jokes, random conversations and countless memories.
+Yet here we are.
 </p>
-</div>
-
 </section>
 
 <section class="fade">
-
 <h2>Core Memories</h2>
-
-<div class="memory">
-<p>
-🚶 Walking to your house after school.
-Some of the best conversations happened there.
-</p>
-</div>
-
-<div class="memory">
-<p>
-💸 The endless battle over who pays first.
-Still unresolved.
-</p>
-</div>
-
-<div class="memory">
-<p>
-😂 Being called Chudail and pta nhi kya kya approximately one million times.
-</p>
-</div>
-
+<p>🚶 Walking to your house after school.</p>
+<br>
+<p>💸 Competing over who pays first.</p>
+<br>
+<p>😂 Calling me CCC an unreasonable number of times.</p>
 </section>
 
 <section class="fade">
-
 <h2>Friendship Statistics</h2>
-
-<div class="stats">
-
-Years Together: 3+
-
-<br>
-
-Times Called Chudail: Too Many
-
-<br>
-
-Arguments About Paying: Infinite
-
-<br>
-
-Loyalty Level: ∞
-
-</div>
-
+<div class="stat">Years Together: 3+</div>
+<div class="stat">Times Called CCC: Too Many</div>
+<div class="stat">Payment Battles: Infinite</div>
+<div class="stat">Loyalty Level: ∞</div>
+<p style="opacity:.4;font-size:.8rem;margin-top:20px">
+Secret Fact: The inventor of the nickname CCC remains under investigation.
+</p>
 </section>
 
 <section class="fade">
+<h2>Photo Gallery</h2>
+<div class="gallery">
+<img src="photo1.jpeg">
+<img src="photo2.jpeg">
+<img src="photo3.jpeg">
+<img src="photo4.jpeg">
+<img src="photo5.jpeg">
+</div>
+</section>
 
+<section class="fade">
 <h2>Why You're Special</h2>
-
 <p>
-
-✔ Caring: Gentleman Behavior (love it sm!!)
-
-<br><br>
-
-✔ Respectful: Aage bhi karta rahiyo
-
-<br><br>
-
-✔ Genuine: Haan woh toh hai tu..(Don't ever try to hide anything from me)
-
-<br><br>
-
-One of the few people who always stays real.
-
+You are caring.<br><br>
+You are respectful.<br><br>
+You are genuine.<br><br>
+And that's rarer than you think.
 </p>
-
 </section>
 
 <section class="fade">
-
-<h2>Photos</h2>
-
+<h2>A Letter For You</h2>
 <p>
-
+Hola,<br><br>
+From school walks to payment battles,
+from random conversations to unforgettable memories,
+some of my favourite moments from the last few years have you in them.
+<br><br>
+Thank you for being one of the most genuine people I know.
+<br><br>
+Happy Birthday, brother ❤️
 </p>
-
-<img src="photo1.jpeg" class="photo">
-<img src="photo2.jpeg" class="photo">
-<img src="photo3.jpeg" class="photo">
-<img src="photo4.jpeg" class="photo">
-<img src="photo5.jpeg" class="photo">
-<img src="photo6.jpeg" class="photo">
-
 </section>
 
 <section class="fade">
-
-<h2>A Message For You</h2>
-
-<p>
-
-Harshu,
-
-Thank you for all the memories,
-the laughs,
-the random conversations,
-and for being one of the most genuine people I know.
-
-Happy Birthday ❤️
-
-</p>
-
-</section>
-
-<section class="fade">
-
 <div class="final">
-
-🎂 Happy Birthday Harsh 🎂
-
+🎂 Happy Birthday Hola 🎂
 <br><br>
-
-From school walks,
-to meeting each other with same excitement everytime.❤️
-
-Some friendships become MEMORIES.
-Ours became home 🥰🤗
-
+Some people become friends.
+<br><br>
+Very few become family.
+<br><br>
+Thank you for being part of my life.
 </div>
 
+<button onclick="celebrate()">Open Final Gift 🎁</button>
+<button onclick="window.open('https://www.youtube.com/results?search_query=Dandelions+Ruth+B','_blank')">
+🎵 Play Dandelions
+</button>
 </section>
 
 <script>
-
-function checkPassword(){
-
-let pass =
-document.getElementById("password").value;
-
-if(pass==="Chudail"){
-
-document.getElementById("passwordScreen")
-.style.display="none";
-
+function unlock(){
+const p=document.getElementById('pass').value;
+if(p==='ccc'){
+document.getElementById('vault').style.display='none';
+}else{
+alert('Wrong password');
 }
-else{
-
-alert("Wrong password");
-
 }
 
+function celebrate(){
+for(let i=0;i<80;i++){
+let c=document.createElement('div');
+c.innerHTML='🎊';
+c.style.position='fixed';
+c.style.left=Math.random()*100+'vw';
+c.style.top='-20px';
+c.style.fontSize=(20+Math.random()*20)+'px';
+c.style.zIndex='999';
+document.body.appendChild(c);
+let y=0;
+let t=setInterval(()=>{
+y+=5;
+c.style.top=y+'px';
+if(y>window.innerHeight+50){
+clearInterval(t);
+c.remove();
 }
-
+},20);
+}
+setTimeout(()=>{
+alert("Happy Birthday Hola ❤️\n\nThank you for the laughs, the walks home, the payment battles, and every memory in between.");
+},500);
+}
 </script>
-
 </body>
 </html>
